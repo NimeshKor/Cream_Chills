@@ -15,23 +15,12 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "../frontend")));
 
 // Connect to PostgreSQL
-const db = new Pool(
-    process.env.INSTANCE_UNIX_SOCKET
-        ? {
-            user: process.env.DB_USER,
-            host: process.env.INSTANCE_UNIX_SOCKET,
-            database: process.env.DB_NAME,
-            password: process.env.DB_PASSWORD
-        }
-        : {
-            user: process.env.DB_USER,
-            host: process.env.DB_HOST,
-            database: process.env.DB_NAME,
-            password: process.env.DB_PASSWORD,
-            port: process.env.DB_PORT,
-            ssl: process.env.DB_SSL === "true" ? { rejectUnauthorized: false } : false
-        }
-);
+const db = new Pool({
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+        rejectUnauthorized: false
+    }
+});
 
 
 // Test database connection
