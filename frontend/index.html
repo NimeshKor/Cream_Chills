@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreamChills - Ice Cream</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>CreamChills</h1>
+        <p>Chill Your Cravings 🍦</p>
+
+        <nav>
+            <button onclick="showSection('menu')">Menu</button>
+            <button onclick="showSection('cart')">Cart</button>
+            <button onclick="showSection('track')">Track Order</button>
+            <button onclick="showSection('admin')">Admin</button>
+        </nav>
+    </header>
+
+
+    <!-- Menu -->
+    <section id="menu">
+        <h2>Our Ice Creams</h2>
+
+        <div id="products">
+            <!-- Products will come from the database -->
+        </div>
+    </section>
+
+
+    <!-- Cart -->
+    <section id="cart" class="hidden">
+        <h2>Your Cart</h2>
+
+        <div id="cartItems">
+            <p>Your cart is empty.</p>
+        </div>
+
+        <h3>Total: ₹<span id="cartTotal">0</span></h3>
+
+        <button onclick="showSection('checkout')">
+            Proceed to Checkout
+        </button>
+    </section>
+
+
+    <!-- Checkout -->
+    <section id="checkout" class="hidden">
+        <h2>Checkout</h2>
+
+        <form id="checkoutForm">
+
+            <label>Name</label>
+            <input type="text" id="customerName" required>
+
+            <label>Mobile</label>
+            <input type="text" id="mobile" required>
+
+            <label>Address</label>
+            <textarea id="address" required></textarea>
+
+            <label>Payment Method</label>
+            <select id="payment">
+                <option value="COD">Cash on Delivery</option>
+                <option value="UPI">UPI</option>
+            </select>
+
+            <button type="submit">Place Order</button>
+
+        </form>
+
+        <p id="orderMessage"></p>
+    </section>
+
+
+    <!-- Order Tracking -->
+    <section id="track" class="hidden">
+        <h2>Track Your Order</h2>
+
+        <input
+            type="text"
+            id="orderId"
+            placeholder="Enter Order ID (Example: CC1001)"
+        >
+
+        <button onclick="trackOrder()">Track</button>
+
+        <div id="orderStatus"></div>
+    </section>
+
+
+    <!-- Admin -->
+    <section id="admin" class="hidden">
+        <h2>Admin Panel</h2>
+
+        <div id="adminLogin">
+
+            <input
+                type="text"
+                id="adminUsername"
+                placeholder="Username"
+            >
+
+            <input
+                type="password"
+                id="adminPassword"
+                placeholder="Password"
+            >
+
+            <button onclick="adminLogin()">Login</button>
+
+            <p id="loginMessage"></p>
+
+        </div>
+
+
+        <div id="adminOrders" class="hidden">
+
+            <h3>All Orders</h3>
+
+            <div id="ordersList"></div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>© 2026 CreamChills | College Project</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

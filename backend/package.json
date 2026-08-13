@@ -1,0 +1,15 @@
+{
+  "name": "creamchills-backend",
+  "version": "1.0.0",
+  "description": "Simple college ice cream ordering project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.3",
+    "pg": "^8.23.0"
+  }
+}

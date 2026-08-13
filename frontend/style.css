@@ -1,0 +1,171 @@
+/* Basic page setup */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff8f5;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #ffd6df;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    color: #c94f7c;
+}
+
+header p {
+    margin: 8px 0;
+}
+
+/* Navigation */
+nav {
+    margin-top: 15px;
+}
+
+button {
+    background-color: #c94f7c;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a83d65;
+}
+
+/* Sections */
+section {
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #c94f7c;
+}
+
+/* Product area */
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Product card */
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+}
+
+.product h3 {
+    margin-top: 5px;
+}
+
+.product p {
+    font-size: 14px;
+}
+
+/* Cart items */
+.cart-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+}
+
+/* Forms */
+form {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+/* Order status */
+#orderStatus {
+    background-color: white;
+    padding: 15px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Admin orders */
+.order {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 6px;
+}
+
+/* Hide sections */
+.hidden {
+    display: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #ffd6df;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    section {
+        padding: 10px;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    nav button {
+        display: block;
+        width: 90%;
+        margin: 6px auto;
+    }
+}
