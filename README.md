@@ -47,6 +47,8 @@ Cream_chills/
 │   ├── package.json
 │   └── package-lock.json
 │
+├── Dockerfile
+├── .dockerignore
 ├── database.sql
 ├── .gitignore
 └── README.md
