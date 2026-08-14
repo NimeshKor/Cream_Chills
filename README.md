@@ -1,5 +1,8 @@
 #  CreamChills - Online Ice Cream Ordering System
 
+"Link to our Website - https://creamchills.onrender.com 
+Plz access it and give us your valuable reviews so we can improve this." 
+
 CreamChills is a simple college-level web project for ordering ice cream online.
 
 The project demonstrates how a frontend, backend, REST API and PostgreSQL database can work together.
@@ -53,5 +56,3 @@ Cream_chills/
 ├── .gitignore
 └── README.md
 
-Link to our Website - https://creamchills.onrender.com 
-Plz access it and give us your valuable reviews so we can improve this. 
